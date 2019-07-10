@@ -110,13 +110,18 @@ msm8953_volt = [
 1065000
 ]
 
-figure(1, 'position', [0,0, 1000, 1000]);
+figure(1, 'position', [0,0, 1000, 768]);
 plot(
   a5_freq, a5_volt,
+  "linewidth", 4
   s7_freq, s7_volt,
-  msm8953_freq, msm8953_volt
+  "linewidth", 4,
+  msm8953_freq, msm8953_volt,
+  "linewidth", 4
 );
 title('CPU freq vs power voltage');
 legend('a5y17lte exynos 7880 - 14nm 01/01/2017','s7 - exynos 8890 - 14nm - 03/01/2016', 'samsung c7 - msm8953 - 14nm 11/02/2016');
 xlabel('Frequency, Khz');
 ylabel('Voltage, uV');
+set(gca,'fontsize',20);
+set(gca, 'linewidth', 4);
